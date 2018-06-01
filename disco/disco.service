@@ -1,0 +1,13 @@
+[Unit]
+Description=service discovery
+After=network.target
+
+[Service]
+Environment="PYTHONUNBUFFERED=1"
+#Environment="REDIS_URL="
+ExecStart=/usr/bin/python -m disco
+Restart=on-failure
+RestartSec=30
+
+[Install]
+WantedBy=multi-user.target
