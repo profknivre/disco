@@ -3,10 +3,11 @@ if __name__ == '__main__':
     import os
     from disco import DiscoServer
 
-    redis_url = os.environ.get('REDIS_URL','redis://localhost')
+    redis_url = os.environ.get('REDIS_URL', 'redis://localhost')
 
     instance = DiscoServer(redis_url)
 
-    with DocXMLRPCServer(('', 8888),allow_none=True) as server:
+    with DocXMLRPCServer(('', 8888), allow_none=True) as server:
         server.register_instance(instance)
+        os.system('systemd-notify --ready')
         server.serve_forever()

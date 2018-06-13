@@ -1,11 +1,11 @@
 [tool.poetry]
 name = "disco"
-version = "0.1.0"
+version = "0.2.0"
 description = "very simple service discovery app"
 authors = ["Grzegorz Zebrowski <grzegorz.zebrowski@thrust.pl>"]
 
 [tool.poetry.dependencies]
-python = "*"
+python = "^3.4"
 redis = "^2.10"
 
 [tool.poetry.dev-dependencies]

@@ -8,6 +8,7 @@ Environment="PYTHONUNBUFFERED=1"
 ExecStart=/usr/bin/python -m disco
 Restart=on-failure
 RestartSec=30
+Type=notify
 
 [Install]
 WantedBy=multi-user.target
